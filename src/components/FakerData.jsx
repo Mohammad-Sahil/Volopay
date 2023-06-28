@@ -17,7 +17,7 @@ function FakerData() {
 
     // Generate objects
     for (let i = 0; i < 100; i++) {
-        const owner_id = Math.floor(Math.random() * 100) + 1;
+        const owner_id = i + 1;
         const name = names[Math.floor(Math.random() * names.length)];
         const budget_name = budgetNames[Math.floor(Math.random() * budgetNames.length)];
         const card_type = Math.random() < 0.5 ? 'burner' : 'subscription';
