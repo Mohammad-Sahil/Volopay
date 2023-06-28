@@ -2,15 +2,20 @@ import CachedIcon from '@mui/icons-material/Cached';
 import { Grid } from "@mui/material"
 import LocalFireDepartmentOutlinedIcon from '@mui/icons-material/LocalFireDepartmentOutlined';
 
-const CardItem = ({ mockItem }) => {
+const CardItem = ({ mockItem, handleClick, onClick }) => {
 
     const progressBarStyle = {
         spentWidth: `${(mockItem?.spent?.value / (mockItem?.spent?.value + mockItem?.available_to_spend?.value)) * 100}%`,
         balanceWidth: `${(mockItem?.available_to_spend?.value / (mockItem?.spent?.value + mockItem?.available_to_spend?.value)) * 100}%`,
     };
 
+    const handleClicks = () => {
+        handleClick();
+        onClick(mockItem);
+    }
+
     return (
-        <div className="card_item">
+        <div className="card_item" onClick={handleClicks}>
             <h3>{mockItem.name}
                 {mockItem.card_type === 'subscription' ? <CachedIcon style={{ color: '#E71A67', background: '#FAEEF2', borderRadius: '50%', padding: '5px' }} /> : <LocalFireDepartmentOutlinedIcon style={{ color: '#E19436', background: '#FEF4EB', borderRadius: '50%', padding: '5px' }} />}
             </h3>

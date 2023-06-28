@@ -1,5 +1,5 @@
 
-const mockData = [
+const mockkData = [
 
     {
         name: 'Netflix',
@@ -1102,4 +1102,4 @@ const mockData = [
         status: 'active'
     }
 ];
-export default mockData;
+export default mockkData;
