@@ -6,6 +6,7 @@ import TextField from '@mui/material/TextField';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { styled } from '@mui/system';
 import GridCards from "./GridCards";
+import mockData from './mockData';
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
@@ -71,7 +72,7 @@ const HomePage = () => {
                         </div>
                     </div>
                     <div className="content">
-                        <GridCards />
+                        <GridCards mockData={mockData} />
                     </div>
                 </Grid>
             </Grid>
