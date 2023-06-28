@@ -8,7 +8,7 @@ const mockData = [
         spent: { value: 587, currency: 'SGD' },
         available_to_spend: { value: 413, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Tue Jul 27 2021',
+        expiry: 'Jul 27 2021',
         limit: 100,
         status: 'active'
     },
@@ -19,7 +19,7 @@ const mockData = [
         spent: { value: 433, currency: 'SGD' },
         available_to_spend: { value: 567, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Thu Dec 22 2022',
+        expiry: 'Dec 22 2022',
         limit: 100,
         status: 'active'
     },
@@ -30,7 +30,7 @@ const mockData = [
         spent: { value: 927, currency: 'SGD' },
         available_to_spend: { value: 73, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Wed Dec 01 2021',
+        expiry: 'Dec 01 2021',
         limit: 100,
         status: 'active'
     },
@@ -41,7 +41,7 @@ const mockData = [
         spent: { value: 888, currency: 'SGD' },
         available_to_spend: { value: 112, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Thu Mar 31 2022',
+        expiry: 'Mar 31 2022',
         limit: 100,
         status: 'active'
     },
@@ -52,7 +52,7 @@ const mockData = [
         spent: { value: 374, currency: 'SGD' },
         available_to_spend: { value: 626, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Fri Jun 24 2022',
+        expiry: 'Jun 24 2022',
         limit: 100,
         status: 'active'
     },
@@ -63,7 +63,7 @@ const mockData = [
         spent: { value: 865, currency: 'SGD' },
         available_to_spend: { value: 135, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Sun Apr 17 2022',
+        expiry: 'Apr 17 2022',
         limit: 100,
         status: 'active'
     },
@@ -74,7 +74,7 @@ const mockData = [
         spent: { value: 928, currency: 'SGD' },
         available_to_spend: { value: 72, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Tue Oct 26 2021',
+        expiry: 'Oct 26 2021',
         limit: 100,
         status: 'active'
     },
@@ -85,7 +85,7 @@ const mockData = [
         spent: { value: 412, currency: 'SGD' },
         available_to_spend: { value: 588, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Fri Sep 24 2021',
+        expiry: 'Sep 24 2021',
         limit: 100,
         status: 'active'
     },
@@ -96,7 +96,7 @@ const mockData = [
         spent: { value: 478, currency: 'SGD' },
         available_to_spend: { value: 522, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Tue Aug 09 2022',
+        expiry: 'Aug 09 2022',
         limit: 100,
         status: 'active'
     },
@@ -107,7 +107,7 @@ const mockData = [
         spent: { value: 342, currency: 'SGD' },
         available_to_spend: { value: 658, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Thu Apr 14 2022',
+        expiry: 'Apr 14 2022',
         limit: 100,
         status: 'active'
     },
@@ -118,7 +118,7 @@ const mockData = [
         spent: { value: 694, currency: 'SGD' },
         available_to_spend: { value: 306, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Mon Jan 10 2022',
+        expiry: 'Jan 10 2022',
         limit: 100,
         status: 'active'
     },
@@ -129,7 +129,7 @@ const mockData = [
         spent: { value: 789, currency: 'SGD' },
         available_to_spend: { value: 211, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Tue Aug 17 2021',
+        expiry: 'Aug 17 2021',
         limit: 100,
         status: 'active'
     },
@@ -140,7 +140,7 @@ const mockData = [
         spent: { value: 558, currency: 'SGD' },
         available_to_spend: { value: 442, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Sun Sep 04 2022',
+        expiry: 'Sep 04 2022',
         limit: 100,
         status: 'active'
     },
@@ -151,7 +151,7 @@ const mockData = [
         spent: { value: 955, currency: 'SGD' },
         available_to_spend: { value: 45, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Tue Feb 09 2021',
+        expiry: 'Feb 09 2021',
         limit: 100,
         status: 'active'
     },
@@ -162,7 +162,7 @@ const mockData = [
         spent: { value: 602, currency: 'SGD' },
         available_to_spend: { value: 398, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Sat Jan 29 2022',
+        expiry: 'Jan 29 2022',
         limit: 100,
         status: 'active'
     },
@@ -173,7 +173,7 @@ const mockData = [
         spent: { value: 619, currency: 'SGD' },
         available_to_spend: { value: 381, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Tue Aug 10 2021',
+        expiry: 'Aug 10 2021',
         limit: 100,
         status: 'active'
     },
@@ -184,7 +184,7 @@ const mockData = [
         spent: { value: 459, currency: 'SGD' },
         available_to_spend: { value: 541, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Thu Jun 16 2022',
+        expiry: 'Jun 16 2022',
         limit: 100,
         status: 'active'
     },
@@ -195,7 +195,7 @@ const mockData = [
         spent: { value: 507, currency: 'SGD' },
         available_to_spend: { value: 493, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Fri May 21 2021',
+        expiry: 'May 21 2021',
         limit: 100,
         status: 'active'
     },
@@ -206,7 +206,7 @@ const mockData = [
         spent: { value: 511, currency: 'SGD' },
         available_to_spend: { value: 489, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Fri Jun 10 2022',
+        expiry: 'Jun 10 2022',
         limit: 100,
         status: 'active'
     },
@@ -217,7 +217,7 @@ const mockData = [
         spent: { value: 785, currency: 'SGD' },
         available_to_spend: { value: 215, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Wed May 03 2023',
+        expiry: 'May 03 2023',
         limit: 100,
         status: 'active'
     },
@@ -228,7 +228,7 @@ const mockData = [
         spent: { value: 893, currency: 'SGD' },
         available_to_spend: { value: 107, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Thu Dec 23 2021',
+        expiry: 'Dec 23 2021',
         limit: 100,
         status: 'active'
     },
@@ -239,7 +239,7 @@ const mockData = [
         spent: { value: 667, currency: 'SGD' },
         available_to_spend: { value: 333, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Fri Mar 18 2022',
+        expiry: 'Mar 18 2022',
         limit: 100,
         status: 'active'
     },
@@ -250,7 +250,7 @@ const mockData = [
         spent: { value: 325, currency: 'SGD' },
         available_to_spend: { value: 675, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Tue Nov 15 2022',
+        expiry: 'Nov 15 2022',
         limit: 100,
         status: 'active'
     },
@@ -261,7 +261,7 @@ const mockData = [
         spent: { value: 423, currency: 'SGD' },
         available_to_spend: { value: 577, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Thu Apr 28 2022',
+        expiry: 'Apr 28 2022',
         limit: 100,
         status: 'active'
     },
@@ -272,7 +272,7 @@ const mockData = [
         spent: { value: 424, currency: 'SGD' },
         available_to_spend: { value: 576, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Sat Sep 17 2022',
+        expiry: 'Sep 17 2022',
         limit: 100,
         status: 'active'
     },
@@ -283,7 +283,7 @@ const mockData = [
         spent: { value: 863, currency: 'SGD' },
         available_to_spend: { value: 137, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Sat Mar 04 2023',
+        expiry: 'Mar 04 2023',
         limit: 100,
         status: 'active'
     },
@@ -294,7 +294,7 @@ const mockData = [
         spent: { value: 704, currency: 'SGD' },
         available_to_spend: { value: 296, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Fri Feb 25 2022',
+        expiry: 'Feb 25 2022',
         limit: 100,
         status: 'active'
     },
@@ -305,7 +305,7 @@ const mockData = [
         spent: { value: 317, currency: 'SGD' },
         available_to_spend: { value: 683, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Fri Apr 07 2023',
+        expiry: 'Apr 07 2023',
         limit: 100,
         status: 'active'
     },
@@ -316,7 +316,7 @@ const mockData = [
         spent: { value: 836, currency: 'SGD' },
         available_to_spend: { value: 164, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Thu Jun 03 2021',
+        expiry: 'Jun 03 2021',
         limit: 100,
         status: 'active'
     },
@@ -327,7 +327,7 @@ const mockData = [
         spent: { value: 393, currency: 'SGD' },
         available_to_spend: { value: 607, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Sat Apr 03 2021',
+        expiry: 'Apr 03 2021',
         limit: 100,
         status: 'active'
     },
@@ -338,7 +338,7 @@ const mockData = [
         spent: { value: 646, currency: 'SGD' },
         available_to_spend: { value: 354, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Fri Jan 27 2023',
+        expiry: 'Jan 27 2023',
         limit: 100,
         status: 'active'
     },
@@ -349,7 +349,7 @@ const mockData = [
         spent: { value: 584, currency: 'SGD' },
         available_to_spend: { value: 416, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Sat Mar 04 2023',
+        expiry: 'Mar 04 2023',
         limit: 100,
         status: 'active'
     },
@@ -360,7 +360,7 @@ const mockData = [
         spent: { value: 600, currency: 'SGD' },
         available_to_spend: { value: 400, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Tue Apr 27 2021',
+        expiry: 'Apr 27 2021',
         limit: 100,
         status: 'active'
     },
@@ -371,7 +371,7 @@ const mockData = [
         spent: { value: 522, currency: 'SGD' },
         available_to_spend: { value: 478, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Sat Aug 27 2022',
+        expiry: 'Aug 27 2022',
         limit: 100,
         status: 'active'
     },
@@ -382,7 +382,7 @@ const mockData = [
         spent: { value: 471, currency: 'SGD' },
         available_to_spend: { value: 529, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Fri Dec 23 2022',
+        expiry: 'Dec 23 2022',
         limit: 100,
         status: 'active'
     },
@@ -393,7 +393,7 @@ const mockData = [
         spent: { value: 978, currency: 'SGD' },
         available_to_spend: { value: 22, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Thu Oct 06 2022',
+        expiry: 'Oct 06 2022',
         limit: 100,
         status: 'active'
     },
@@ -404,7 +404,7 @@ const mockData = [
         spent: { value: 646, currency: 'SGD' },
         available_to_spend: { value: 354, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Fri Aug 12 2022',
+        expiry: 'Aug 12 2022',
         limit: 100,
         status: 'active'
     },
@@ -415,7 +415,7 @@ const mockData = [
         spent: { value: 980, currency: 'SGD' },
         available_to_spend: { value: 20, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Thu Dec 02 2021',
+        expiry: 'Dec 02 2021',
         limit: 100,
         status: 'active'
     },
@@ -426,7 +426,7 @@ const mockData = [
         spent: { value: 787, currency: 'SGD' },
         available_to_spend: { value: 213, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Thu Mar 04 2021',
+        expiry: 'Mar 04 2021',
         limit: 100,
         status: 'active'
     },
@@ -437,7 +437,7 @@ const mockData = [
         spent: { value: 303, currency: 'SGD' },
         available_to_spend: { value: 697, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Thu Aug 25 2022',
+        expiry: 'Aug 25 2022',
         limit: 100,
         status: 'active'
     },
@@ -448,7 +448,7 @@ const mockData = [
         spent: { value: 919, currency: 'SGD' },
         available_to_spend: { value: 81, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Sun Feb 20 2022',
+        expiry: 'Feb 20 2022',
         limit: 100,
         status: 'active'
     },
@@ -459,7 +459,7 @@ const mockData = [
         spent: { value: 958, currency: 'SGD' },
         available_to_spend: { value: 42, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Wed Apr 12 2023',
+        expiry: 'Apr 12 2023',
         limit: 100,
         status: 'active'
     },
@@ -470,7 +470,7 @@ const mockData = [
         spent: { value: 432, currency: 'SGD' },
         available_to_spend: { value: 568, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Sat Feb 20 2021',
+        expiry: 'Feb 20 2021',
         limit: 100,
         status: 'active'
     },
@@ -481,7 +481,7 @@ const mockData = [
         spent: { value: 305, currency: 'SGD' },
         available_to_spend: { value: 695, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Wed Jun 08 2022',
+        expiry: 'Jun 08 2022',
         limit: 100,
         status: 'active'
     },
@@ -492,7 +492,7 @@ const mockData = [
         spent: { value: 1000, currency: 'SGD' },
         available_to_spend: { value: 0, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Tue Jul 27 2021',
+        expiry: 'Jul 27 2021',
         limit: 100,
         status: 'active'
     },
@@ -503,7 +503,7 @@ const mockData = [
         spent: { value: 962, currency: 'SGD' },
         available_to_spend: { value: 38, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Sat Jun 11 2022',
+        expiry: 'Jun 11 2022',
         limit: 100,
         status: 'active'
     },
@@ -514,7 +514,7 @@ const mockData = [
         spent: { value: 433, currency: 'SGD' },
         available_to_spend: { value: 567, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Sun May 21 2023',
+        expiry: 'May 21 2023',
         limit: 100,
         status: 'active'
     },
@@ -525,7 +525,7 @@ const mockData = [
         spent: { value: 542, currency: 'SGD' },
         available_to_spend: { value: 458, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Fri Feb 24 2023',
+        expiry: 'Feb 24 2023',
         limit: 100,
         status: 'active'
     },
@@ -536,7 +536,7 @@ const mockData = [
         spent: { value: 778, currency: 'SGD' },
         available_to_spend: { value: 222, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Tue Feb 23 2021',
+        expiry: 'Feb 23 2021',
         limit: 100,
         status: 'active'
     },
@@ -547,7 +547,7 @@ const mockData = [
         spent: { value: 379, currency: 'SGD' },
         available_to_spend: { value: 621, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Sat Dec 04 2021',
+        expiry: 'Dec 04 2021',
         limit: 100,
         status: 'active'
     },
@@ -558,7 +558,7 @@ const mockData = [
         spent: { value: 721, currency: 'SGD' },
         available_to_spend: { value: 279, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Mon Oct 24 2022',
+        expiry: 'Oct 24 2022',
         limit: 100,
         status: 'active'
     },
@@ -569,7 +569,7 @@ const mockData = [
         spent: { value: 881, currency: 'SGD' },
         available_to_spend: { value: 119, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Fri Oct 29 2021',
+        expiry: 'Oct 29 2021',
         limit: 100,
         status: 'active'
     },
@@ -580,7 +580,7 @@ const mockData = [
         spent: { value: 935, currency: 'SGD' },
         available_to_spend: { value: 65, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Wed Jun 01 2022',
+        expiry: 'Jun 01 2022',
         limit: 100,
         status: 'active'
     },
@@ -591,7 +591,7 @@ const mockData = [
         spent: { value: 328, currency: 'SGD' },
         available_to_spend: { value: 672, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Tue Aug 24 2021',
+        expiry: 'Aug 24 2021',
         limit: 100,
         status: 'active'
     },
@@ -602,7 +602,7 @@ const mockData = [
         spent: { value: 489, currency: 'SGD' },
         available_to_spend: { value: 511, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Sun Jul 24 2022',
+        expiry: 'Jul 24 2022',
         limit: 100,
         status: 'active'
     },
@@ -613,7 +613,7 @@ const mockData = [
         spent: { value: 998, currency: 'SGD' },
         available_to_spend: { value: 2, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Thu Dec 16 2021',
+        expiry: 'Dec 16 2021',
         limit: 100,
         status: 'active'
     },
@@ -624,7 +624,7 @@ const mockData = [
         spent: { value: 664, currency: 'SGD' },
         available_to_spend: { value: 336, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Sun May 16 2021',
+        expiry: 'May 16 2021',
         limit: 100,
         status: 'active'
     },
@@ -635,7 +635,7 @@ const mockData = [
         spent: { value: 623, currency: 'SGD' },
         available_to_spend: { value: 377, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Mon May 31 2021',
+        expiry: 'May 31 2021',
         limit: 100,
         status: 'active'
     },
@@ -646,7 +646,7 @@ const mockData = [
         spent: { value: 724, currency: 'SGD' },
         available_to_spend: { value: 276, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Sat Jan 15 2022',
+        expiry: 'Jan 15 2022',
         limit: 100,
         status: 'active'
     },
@@ -657,7 +657,7 @@ const mockData = [
         spent: { value: 822, currency: 'SGD' },
         available_to_spend: { value: 178, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Mon Mar 22 2021',
+        expiry: 'Mar 22 2021',
         limit: 100,
         status: 'active'
     },
@@ -668,7 +668,7 @@ const mockData = [
         spent: { value: 415, currency: 'SGD' },
         available_to_spend: { value: 585, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Wed May 25 2022',
+        expiry: 'May 25 2022',
         limit: 100,
         status: 'active'
     },
@@ -679,7 +679,7 @@ const mockData = [
         spent: { value: 810, currency: 'SGD' },
         available_to_spend: { value: 190, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Wed Jul 21 2021',
+        expiry: 'Jul 21 2021',
         limit: 100,
         status: 'active'
     },
@@ -690,7 +690,7 @@ const mockData = [
         spent: { value: 862, currency: 'SGD' },
         available_to_spend: { value: 138, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Sat Apr 22 2023',
+        expiry: 'Apr 22 2023',
         limit: 100,
         status: 'active'
     },
@@ -701,7 +701,7 @@ const mockData = [
         spent: { value: 726, currency: 'SGD' },
         available_to_spend: { value: 274, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Tue Dec 20 2022',
+        expiry: 'Dec 20 2022',
         limit: 100,
         status: 'active'
     },
@@ -712,7 +712,7 @@ const mockData = [
         spent: { value: 361, currency: 'SGD' },
         available_to_spend: { value: 639, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Thu Feb 24 2022',
+        expiry: 'Feb 24 2022',
         limit: 100,
         status: 'active'
     },
@@ -723,7 +723,7 @@ const mockData = [
         spent: { value: 397, currency: 'SGD' },
         available_to_spend: { value: 603, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Tue Jul 06 2021',
+        expiry: 'Jul 06 2021',
         limit: 100,
         status: 'active'
     },
@@ -734,7 +734,7 @@ const mockData = [
         spent: { value: 780, currency: 'SGD' },
         available_to_spend: { value: 220, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Tue Feb 15 2022',
+        expiry: 'Feb 15 2022',
         limit: 100,
         status: 'active'
     },
@@ -745,7 +745,7 @@ const mockData = [
         spent: { value: 480, currency: 'SGD' },
         available_to_spend: { value: 520, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Wed Feb 17 2021',
+        expiry: 'Feb 17 2021',
         limit: 100,
         status: 'active'
     },
@@ -756,7 +756,7 @@ const mockData = [
         spent: { value: 329, currency: 'SGD' },
         available_to_spend: { value: 671, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Thu Jun 22 2023',
+        expiry: 'Jun 22 2023',
         limit: 100,
         status: 'active'
     },
@@ -767,7 +767,7 @@ const mockData = [
         spent: { value: 609, currency: 'SGD' },
         available_to_spend: { value: 391, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Sat May 08 2021',
+        expiry: 'May 08 2021',
         limit: 100,
         status: 'active'
     },
@@ -778,7 +778,7 @@ const mockData = [
         spent: { value: 542, currency: 'SGD' },
         available_to_spend: { value: 458, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Sat Oct 16 2021',
+        expiry: 'Oct 16 2021',
         limit: 100,
         status: 'active'
     },
@@ -789,7 +789,7 @@ const mockData = [
         spent: { value: 895, currency: 'SGD' },
         available_to_spend: { value: 105, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Thu Mar 18 2021',
+        expiry: 'Mar 18 2021',
         limit: 100,
         status: 'active'
     },
@@ -800,7 +800,7 @@ const mockData = [
         spent: { value: 882, currency: 'SGD' },
         available_to_spend: { value: 118, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Tue May 02 2023',
+        expiry: 'May 02 2023',
         limit: 100,
         status: 'active'
     },
@@ -811,7 +811,7 @@ const mockData = [
         spent: { value: 934, currency: 'SGD' },
         available_to_spend: { value: 66, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Wed Nov 03 2021',
+        expiry: 'Nov 03 2021',
         limit: 100,
         status: 'active'
     },
@@ -822,7 +822,7 @@ const mockData = [
         spent: { value: 594, currency: 'SGD' },
         available_to_spend: { value: 406, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Sun Feb 19 2023',
+        expiry: 'Feb 19 2023',
         limit: 100,
         status: 'active'
     },
@@ -833,7 +833,7 @@ const mockData = [
         spent: { value: 871, currency: 'SGD' },
         available_to_spend: { value: 129, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Sun May 15 2022',
+        expiry: 'May 15 2022',
         limit: 100,
         status: 'active'
     },
@@ -844,7 +844,7 @@ const mockData = [
         spent: { value: 599, currency: 'SGD' },
         available_to_spend: { value: 401, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Thu Apr 14 2022',
+        expiry: 'Apr 14 2022',
         limit: 100,
         status: 'active'
     },
@@ -855,7 +855,7 @@ const mockData = [
         spent: { value: 765, currency: 'SGD' },
         available_to_spend: { value: 235, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Sat May 20 2023',
+        expiry: 'May 20 2023',
         limit: 100,
         status: 'active'
     },
@@ -866,7 +866,7 @@ const mockData = [
         spent: { value: 752, currency: 'SGD' },
         available_to_spend: { value: 248, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Fri Jul 01 2022',
+        expiry: 'Jul 01 2022',
         limit: 100,
         status: 'active'
     },
@@ -877,7 +877,7 @@ const mockData = [
         spent: { value: 801, currency: 'SGD' },
         available_to_spend: { value: 199, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Thu Mar 23 2023',
+        expiry: 'Mar 23 2023',
         limit: 100,
         status: 'active'
     },
@@ -888,7 +888,7 @@ const mockData = [
         spent: { value: 944, currency: 'SGD' },
         available_to_spend: { value: 56, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Fri Dec 10 2021',
+        expiry: 'Dec 10 2021',
         limit: 100,
         status: 'active'
     },
@@ -899,7 +899,7 @@ const mockData = [
         spent: { value: 925, currency: 'SGD' },
         available_to_spend: { value: 75, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Wed Aug 11 2021',
+        expiry: 'Aug 11 2021',
         limit: 100,
         status: 'active'
     },
@@ -910,7 +910,7 @@ const mockData = [
         spent: { value: 795, currency: 'SGD' },
         available_to_spend: { value: 205, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Mon Nov 15 2021',
+        expiry: 'Nov 15 2021',
         limit: 100,
         status: 'active'
     },
@@ -921,7 +921,7 @@ const mockData = [
         spent: { value: 815, currency: 'SGD' },
         available_to_spend: { value: 185, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Thu Dec 08 2022',
+        expiry: 'Dec 08 2022',
         limit: 100,
         status: 'active'
     },
@@ -932,7 +932,7 @@ const mockData = [
         spent: { value: 859, currency: 'SGD' },
         available_to_spend: { value: 141, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Wed Apr 13 2022',
+        expiry: 'Apr 13 2022',
         limit: 100,
         status: 'active'
     },
@@ -943,7 +943,7 @@ const mockData = [
         spent: { value: 728, currency: 'SGD' },
         available_to_spend: { value: 272, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Thu Mar 18 2021',
+        expiry: 'Mar 18 2021',
         limit: 100,
         status: 'active'
     },
@@ -954,7 +954,7 @@ const mockData = [
         spent: { value: 685, currency: 'SGD' },
         available_to_spend: { value: 315, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Sat Jul 17 2021',
+        expiry: 'Jul 17 2021',
         limit: 100,
         status: 'active'
     },
@@ -965,7 +965,7 @@ const mockData = [
         spent: { value: 312, currency: 'SGD' },
         available_to_spend: { value: 688, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Thu Apr 27 2023',
+        expiry: 'Apr 27 2023',
         limit: 100,
         status: 'active'
     },
@@ -976,7 +976,7 @@ const mockData = [
         spent: { value: 379, currency: 'SGD' },
         available_to_spend: { value: 621, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Tue Oct 26 2021',
+        expiry: 'Oct 26 2021',
         limit: 100,
         status: 'active'
     },
@@ -987,7 +987,7 @@ const mockData = [
         spent: { value: 334, currency: 'SGD' },
         available_to_spend: { value: 666, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Sat Jun 03 2023',
+        expiry: 'Jun 03 2023',
         limit: 100,
         status: 'active'
     },
@@ -998,7 +998,7 @@ const mockData = [
         spent: { value: 476, currency: 'SGD' },
         available_to_spend: { value: 524, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Sat Mar 04 2023',
+        expiry: 'Mar 04 2023',
         limit: 100,
         status: 'active'
     },
@@ -1009,7 +1009,7 @@ const mockData = [
         spent: { value: 852, currency: 'SGD' },
         available_to_spend: { value: 148, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Mon Jun 14 2021',
+        expiry: 'Jun 14 2021',
         limit: 100,
         status: 'active'
     },
@@ -1020,7 +1020,7 @@ const mockData = [
         spent: { value: 447, currency: 'SGD' },
         available_to_spend: { value: 553, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Tue Jun 21 2022',
+        expiry: 'Jun 21 2022',
         limit: 100,
         status: 'active'
     },
@@ -1031,7 +1031,7 @@ const mockData = [
         spent: { value: 702, currency: 'SGD' },
         available_to_spend: { value: 298, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Wed Jun 02 2021',
+        expiry: 'Jun 02 2021',
         limit: 100,
         status: 'active'
     },
@@ -1042,7 +1042,7 @@ const mockData = [
         spent: { value: 662, currency: 'SGD' },
         available_to_spend: { value: 338, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Tue Jul 19 2022',
+        expiry: 'Jul 19 2022',
         limit: 100,
         status: 'active'
     },
@@ -1053,7 +1053,7 @@ const mockData = [
         spent: { value: 372, currency: 'SGD' },
         available_to_spend: { value: 628, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Fri Aug 05 2022',
+        expiry: 'Aug 05 2022',
         limit: 100,
         status: 'active'
     },
@@ -1064,7 +1064,7 @@ const mockData = [
         spent: { value: 760, currency: 'SGD' },
         available_to_spend: { value: 240, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Sat Sep 24 2022',
+        expiry: 'Sep 24 2022',
         limit: 100,
         status: 'active'
     },
@@ -1075,7 +1075,7 @@ const mockData = [
         spent: { value: 316, currency: 'SGD' },
         available_to_spend: { value: 684, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Mon Mar 13 2023',
+        expiry: 'Mar 13 2023',
         limit: 100,
         status: 'active'
     },
@@ -1086,7 +1086,7 @@ const mockData = [
         spent: { value: 828, currency: 'SGD' },
         available_to_spend: { value: 172, currency: 'SGD' },
         card_type: 'burner',
-        expiry: 'Sun Feb 27 2022',
+        expiry: 'Feb 27 2022',
         limit: 100,
         status: 'active'
     },
@@ -1097,7 +1097,7 @@ const mockData = [
         spent: { value: 710, currency: 'SGD' },
         available_to_spend: { value: 290, currency: 'SGD' },
         card_type: 'subscription',
-        expiry: 'Fri Sep 16 2022',
+        expiry: 'Sep 16 2022',
         limit: 100,
         status: 'active'
     }

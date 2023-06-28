@@ -1,32 +1,31 @@
-// import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
-
+import CachedIcon from '@mui/icons-material/Cached';
 import { Grid } from "@mui/material"
+import LocalFireDepartmentOutlinedIcon from '@mui/icons-material/LocalFireDepartmentOutlined';
 
 const CardItem = ({ mockItem }) => {
 
-    const spent = 400; // Example value representing spent money
-    const balance = 600; // Example value representing balance money
-
     const progressBarStyle = {
-        spentWidth: `${(spent / (spent + balance)) * 100}%`,
-        balanceWidth: `${(balance / (spent + balance)) * 100}%`,
+        spentWidth: `${(mockItem?.spent?.value / (mockItem?.spent?.value + mockItem?.available_to_spend?.value)) * 100}%`,
+        balanceWidth: `${(mockItem?.available_to_spend?.value / (mockItem?.spent?.value + mockItem?.available_to_spend?.value)) * 100}%`,
     };
 
     return (
         <div className="card_item">
-            <h3>{mockItem.name}</h3>
+            <h3>{mockItem.name}
+                {mockItem.card_type === 'subscription' ? <CachedIcon style={{ color: '#E71A67', background: '#FAEEF2', borderRadius: '50%', padding: '5px' }} /> : <LocalFireDepartmentOutlinedIcon style={{ color: '#E19436', background: '#FEF4EB', borderRadius: '50%', padding: '5px' }} />}
+            </h3>
             <p>{mockItem.budget_name}・Budget</p>
             <div className="midle_card">
-                <Grid spacing={1}>
-                    <Grid item m={4} md={4}>
+                <Grid container spacing={1}>
+                    <Grid item sm={4} md={4}>
                         AMOUNT
                         <p>{mockItem?.spent?.value + mockItem?.available_to_spend?.value} SGD</p>
                     </Grid>
-                    <Grid item m={4} md={4}>
+                    <Grid item sm={4} md={4}>
                         FREQUENCY
                         <p>Monthly</p>
                     </Grid>
-                    <Grid item m={4} md={4}>
+                    <Grid item sm={4} md={4}>
                         EXPIRY
                         <p>{mockItem.expiry}</p>
                     </Grid>

@@ -5,17 +5,35 @@ const GridCards = ({ mockData }) => {
     console.log('mockData: ', mockData[0])
     return (
         <>
-            {/* <Grid container spacing={2}>
+            <Grid container spacing={2}>
                 {mockData.map((item: any) => {
                     return <>
                         <Grid key={item.order_id} item xs={12} sm={12} md={4}>
-                            <CardItem />
+                            <CardItem
+                                mockItem={item}
+                            />
                         </Grid></>
                 })}
+            </Grid>
+            {/* <Grid container spacing={2}>
+                <Grid item xs={12} sm={12} md={4}>
+                    <CardItem
+                        mockItem={mockData[0]}
+                    />
+                </Grid>
+                <Grid item xs={12} sm={12} md={4}>
+                    <CardItem
+                        mockItem={mockData[0]}
+                    />
+                </Grid>
+                <Grid item xs={12} sm={12} md={4}>
+                    <CardItem
+                        mockItem={mockData[0]}
+                    />
+                </Grid>
             </Grid> */}
-            <CardItem
-                mockItem={mockData[0]}
-            />
+
+
         </>
     )
 }

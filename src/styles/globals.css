@@ -92,3 +92,92 @@ body {
   /* Set dynamically based on balance money */
   background-color: #E71A67;
 }
+
+/************* card item************ */
+
+.card_item {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card_item:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card_item h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card_item>p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: #737373;
+}
+
+.card_item .midle_card {
+  margin: 20px 0;
+}
+
+.card_item .midle_card p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: #737373;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card_item .bottom_card {
+  margin: 20px 0;
+}
+
+.card_item .bottom_card>div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card_item .bottom_card>div p:first-child {
+  margin: 0;
+  margin-left: 10px;
+  padding: 0;
+  font-size: 16px;
+  color: #737373;
+  position: relative;
+}
+
+.card_item .bottom_card>div p:last-child {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: #000000;
+}
+
+.card_item .bottom_card>div p:first-child span {
+  font-size: 30px;
+  color: #15984A;
+  position: absolute;
+  top: -10px;
+  left: -20px;
+}
+
+.card_item .bottom_card>div p:last-child span {
+  font-size: 30px;
+  color: #E71A67;
+  position: absolute;
+  top: -10px;
+  left: -20px;
+}
