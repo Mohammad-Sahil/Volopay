@@ -29,10 +29,15 @@ const HomePage = () => {
 
     const [openDialog, setOpenDialog] = useState(false);
     const [selectedValue, setSelectedValue] = useState('');
+    const [selectedNavValue, setSelectedNavValue] = useState('all');
     const [cardData, setCardData] = useState({});
 
     const [searchTerm, setSearchTerm] = useState('');
     const [searchResults, setSearchResults] = useState([]);
+
+    const [data, setData] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const recordsPerPage = 10;
 
     const handleSearch = () => {
         console.log('searchTerm', searchTerm);
@@ -50,15 +55,16 @@ const HomePage = () => {
 
     const handleNavValue = (value) => {
         console.log('value', value);
+        setSelectedNavValue(value);
         if (value === 'your') {
-            const results = mockData.filter(obj =>
+            const results = navResults.filter(obj =>
                 obj.status === 'your'
             );
             setNavResults(results);
         } else if (value === 'all') {
             setNavResults(mockData);
         } else if (value === 'block') {
-            const results = mockData.filter(obj =>
+            const results = navResults.filter(obj =>
                 obj.status === 'block'
             );
             setNavResults(results);
@@ -69,10 +75,11 @@ const HomePage = () => {
         handleSearch();
     }, [searchTerm]);
 
+
     useEffect(() => {
         console.log('cardData', cardData);
         console.log('mockData', mockData)
-    }, [mockData]);
+    }, [mockData || navResults]);
 
     const handleOpenDialog = () => {
         setOpenDialog(true);
@@ -116,6 +123,74 @@ const HomePage = () => {
     const handleSearchClick = () => {
         setIsSearchOpen(!isSearchOpen);
     };
+
+    useEffect(() => {
+        // setNavResults(mockData[1], mockData[3]);
+    }, [selectedNavValue]);
+
+
+
+
+
+
+
+    useEffect(() => {
+        // Fetch initial set of data
+        const initialData = fetchData(1, recordsPerPage);
+        setData(initialData);
+    }, []);
+
+    useEffect(() => {
+        // Fetch more data when currentPage changes
+        console.log('currentPage', currentPage);
+        console.log('currentPage', currentPage);
+        const moreData = fetchData(currentPage, recordsPerPage);
+        setData((prevData) => [...prevData, ...moreData]);
+    }, [currentPage]);
+
+    const handleScroll = () => {
+        console.log('handleScroll');
+        if (typeof window !== 'undefined') {
+            const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+            console.log('scrollableHeight', scrollableHeight);
+            const scrollPosition = window.scrollY;
+            console.log('scrollPosition', scrollPosition);
+
+            // Check if user has scrolled to the bottom
+            if (scrollPosition >= scrollableHeight - 10) {
+                // Increment the currentPage to fetch more data
+                setCurrentPage((prevPage) => prevPage + 1);
+            }
+        }
+    };
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            // Add event listener to detect scrolling
+            window.addEventListener('scroll', handleScroll);
+
+            return () => {
+                // Clean up the event listener
+                window.removeEventListener('scroll', handleScroll);
+            };
+        }
+    }, []);
+
+    // Simulated function to fetch data from the local array
+    const fetchData = (page, limit) => {
+        // Calculate the start index based on the page and limit
+        const startIndex = (page - 1) * limit;
+        // Slice the data array to get the desired subset
+        console.log('navResults', navResults)
+        return navResults.slice(startIndex, startIndex + limit);
+    };
+
+
+
+
+
+
+
     return (
         <>
 
@@ -125,8 +200,8 @@ const HomePage = () => {
                 <Dialog open={openDialog} onClose={handleCloseDialog}>
                     <DialogTitle style={{ textAlign: 'center' }}>Choose the Card</DialogTitle>
                     <hr style={{
-                        color: 'red',
-                        background: 'blue',
+                        color: '#EFEFEF',
+                        background: '#EFEFEF',
                         height: '2px',
                         width: '60%',
                         margin: '0 auto'
@@ -163,9 +238,9 @@ const HomePage = () => {
                     {/* Content for the first division */}
                     <div className="Navbar">
                         <ul>
-                            <li onClick={() => handleNavValue('your')}>Your</li>
-                            <li onClick={() => handleNavValue('all')}>All</li>
-                            <li onClick={() => handleNavValue('block')}>Blocked</li>
+                            <li style={selectedNavValue === 'your' ? { background: '#EFEFEF' } : { background: '#FFFFFF' }} onClick={() => handleNavValue('your')}>Your</li>
+                            <li style={selectedNavValue === 'all' ? { background: '#EFEFEF' } : { background: '#FFFFFF' }} onClick={() => handleNavValue('all')}>All</li>
+                            <li style={selectedNavValue === 'block' ? { background: '#EFEFEF' } : { background: '#FFFFFF' }} onClick={() => handleNavValue('block')}>Blocked</li>
                         </ul>
                     </div>
                     <div className="filter_search">
@@ -202,7 +277,7 @@ const HomePage = () => {
                         </div>
                     </div>
                     <div className="content">
-                        <GridCards handleClick={handleOpenDialog} onClick={getCardData} mockData={searchTerm === '' ? navResults : searchResults} />
+                        <GridCards handleClick={handleOpenDialog} onClick={getCardData} mockData={data} />
                     </div>
                 </Grid>
             </Grid>

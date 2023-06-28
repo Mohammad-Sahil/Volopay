@@ -6,7 +6,8 @@ const GridCards = ({ mockData, handleClick, onClick }) => {
     return (
         <>
             <Grid container spacing={2}>
-                {mockData.map((item: any) => {
+                {/* {mockData.map((item: any) => { */}
+                {mockData.map((item) => {
                     return <>
                         <Grid key={item.order_id} item xs={12} sm={12} md={4}>
                             <CardItem
