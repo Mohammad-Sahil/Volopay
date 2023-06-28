@@ -65,3 +65,30 @@ body {
 .search_box {
   padding: 0 20px;
 }
+
+/* Progress Bar */
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #E71A67;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.filled {
+  height: 100%;
+  transition: width 0.5s;
+}
+
+.spent {
+  width: 40%;
+  /* Set dynamically based on spent money */
+  background-color: #15984A;
+}
+
+.balance {
+  width: 60%;
+  /* Set dynamically based on balance money */
+  background-color: #E71A67;
+}
