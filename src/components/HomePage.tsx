@@ -5,6 +5,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import TextField from '@mui/material/TextField';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { styled } from '@mui/system';
+import GridCards from "./GridCards";
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
