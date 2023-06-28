@@ -69,6 +69,9 @@ const HomePage = () => {
                             </StyledIconButton>
                         </div>
                     </div>
+                    <div className="content">
+                        <GridCards />
+                    </div>
                 </Grid>
             </Grid>
         </>
