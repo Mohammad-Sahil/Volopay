@@ -1,38 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Yolopay Assignment
 
-## Getting Started
+This assignment is built on the Next.js framework (ReactJS framework) using TypeScript, JavaScript, and Material-UI (MUI)
 
-First, run the development server:
+## Installation
+
+1. Clone the repository to your local machine.
 
 ```bash
+git clone https://github.com/Mohammad-Sahil/yolopay.git
+
+```
+2. Navigate to the project directory.
+
+```bash
+cd yolopay
+```
+3. Install the dependencies.
+
+```bash
+npm install
+```
+or
+```bash
+yarn install
+```
+## Configuration
+
+No additional configuration steps are required for this project.
+
+## Usage
+
+To run the application locally, use the following command:
+```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```
+This will start the development server and the application will be accessible at [http://localhost:3000.](http://localhost:3000)
+
+## Folder Structure
+The project folder structure is as follows:
+```bash
+- src/
+  - components/
+    - HomePage.tsx
+    - GridCards.tsx
+    - CardItem.tsx
+  - pages/
+    - index.tsx
+  - ...
+
+```
+- The **`src/components`** folder contains reusable React components used in the application, including **`HomePage`**, **`GridCards`**, and **`CardItem`**.
+- The **`src/pages`** folder contains the main pages of the application, including **`index.tsx`** which serves as the home page.
+
+## Deployment
+To deploy the application to a production environment, follow these steps:
+1. Build the production-ready version of the application.
+```bash
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Start the production server.
+```bash
+npm run start
+```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## License
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+This project is licensed under the [MIT License.](https://choosealicense.com/licenses/mit/)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Contact
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+For any inquiries or feedback, please contact [Mohammad Sahil](https://github.com/Mohammad-Sahil)
