@@ -346,10 +346,10 @@ const HomePage = () => {
                                         <p>Type</p>
                                         <Grid container style={{ margin: '0 auto' }}>
                                             <Grid item sm={6} md={6}>
-                                                <input onChange={(e) => setSubscription(e.target.checked)} type="checkbox" id="subscription" name="subscription" checked={subscription} /><label for="subscription">Subscription</label>
+                                                <input onChange={(e) => setSubscription(e.target.checked)} type="checkbox" id="subscription" name="subscription" checked={subscription} /><label htmlFor="subscription">Subscription</label>
                                             </Grid>
                                             <Grid item sm={6} md={6}>
-                                                <input onChange={(e) => setBurner(e.target.checked)} type="checkbox" id="burner" name="burner" checked={burner} /><label for="burner">Burner</label>
+                                                <input onChange={(e) => setBurner(e.target.checked)} type="checkbox" id="burner" name="burner" checked={burner} /><label htmlFor="burner">Burner</label>
                                             </Grid>
                                         </Grid>
                                     </div>
