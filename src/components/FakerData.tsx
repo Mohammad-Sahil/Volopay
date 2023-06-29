@@ -1,15 +1,23 @@
-// import faker from 'faker';
-
 function FakerData() {
-    function getRandomDate(start, end) {
+    function getRandomDate(start: string, end: Date) {
         const startDate = new Date(start).getTime();
-        const endDate = new Date(end).getTime();
+        const endDate = end.getTime();
         const randomTime = Math.random() * (endDate - startDate) + startDate;
         return new Date(randomTime);
     }
 
     // Array to store the generated objects
-    const data = [];
+    const data: {
+        name: string;
+        budget_name: string;
+        owner_id: number;
+        spent: { value: number; currency: string };
+        available_to_spend: { value: number; currency: string };
+        card_type: string;
+        expiry: string;
+        limit: number;
+        status: string;
+    }[] = [];
 
     // Budget names and names
     const budgetNames = ['Software subscription', 'Memberfive'];
@@ -50,7 +58,7 @@ function FakerData() {
     console.log(data);
     return (
         <div>FakerData</div>
-    )
+    );
 }
 
-export default FakerData
+export default FakerData;
