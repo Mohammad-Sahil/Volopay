@@ -7,6 +7,10 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 import { styled } from '@mui/system';
 import GridCards from "./GridCards";
 import mockkData from './mockData';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Card, CardContent } from '@mui/material';
 import CachedIcon from '@mui/icons-material/Cached';
 import LocalFireDepartmentOutlinedIcon from '@mui/icons-material/LocalFireDepartmentOutlined';
@@ -27,17 +31,66 @@ const HomePage = () => {
     const [mockData, setMockData] = useState(mockkData);
     const [navResults, setNavResults] = useState(mockData);
 
+    const [showFilter, setShowFilter] = useState(false);
+
     const [openDialog, setOpenDialog] = useState(false);
     const [selectedValue, setSelectedValue] = useState('');
     const [selectedNavValue, setSelectedNavValue] = useState('all');
     const [cardData, setCardData] = useState({});
 
+    const [filteredItems, setFilteredItems] = useState([]);
+
     const [searchTerm, setSearchTerm] = useState('');
     const [searchResults, setSearchResults] = useState([]);
+
+    const [filterData, setFilterData] = useState(navResults);
+
+    const [burner, setBurner] = useState(false);
+    const [subscription, setSubscription] = useState(false);
 
     const [data, setData] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const recordsPerPage = 10;
+
+    const showFilterOption = () => {
+        setShowFilter(!showFilter);
+    }
+
+    useEffect(() => {
+        setFilterData(navResults);
+    }, [navResults])
+
+    const handleFilterOption = () => {
+        setShowFilter(false);
+        console.log('burner', burner);
+        console.log('subscription', subscription);
+        let results = [];
+        if (burner) {
+            console.log('burner', burner);
+
+            const results1 = navResults.filter(obj => obj.card_type === 'burner');
+            console.log('results1', results1);
+            console.log('results', results);
+            results = [...results, ...results1];
+        }
+        if (subscription) {
+            console.log('subscription', subscription);
+
+            const results2 = navResults.filter(obj => {
+                return obj.card_type === 'subscription'
+            });
+            console.log('results2', results2);
+            console.log('results', results);
+            results = [...results, ...results2];
+        }
+
+        console.log('results', results);
+        setFilterData(results);
+
+        if ((!burner && !subscription) || (burner && subscription)) {
+            setFilterData(navResults);
+        }
+    }
 
     const handleSearch = () => {
         console.log('searchTerm', searchTerm);
@@ -57,19 +110,23 @@ const HomePage = () => {
         console.log('value', value);
         setSelectedNavValue(value);
         if (value === 'your') {
-            const results = navResults.filter(obj =>
+            const results = mockData.filter(obj =>
                 obj.status === 'your'
             );
             setNavResults(results);
         } else if (value === 'all') {
             setNavResults(mockData);
         } else if (value === 'block') {
-            const results = navResults.filter(obj =>
+            const results = mockData.filter(obj =>
                 obj.status === 'block'
             );
             setNavResults(results);
         }
     }
+
+    useEffect(() => {
+        setFilteredItems(navResults)
+    }, [navResults])
 
     useEffect(() => {
         handleSearch();
@@ -132,58 +189,56 @@ const HomePage = () => {
 
 
 
+    ////////////////////////// Infinite scroll code
 
+    // useEffect(() => {
+    //     // Fetch initial set of data
+    //     const initialData = fetchData(1, recordsPerPage);
+    //     setData(initialData);
+    // }, []);
 
-    useEffect(() => {
-        // Fetch initial set of data
-        const initialData = fetchData(1, recordsPerPage);
-        setData(initialData);
-    }, []);
+    // useEffect(() => {
+    //     // Fetch more data when currentPage changes
+    //     const moreData = fetchData(currentPage, recordsPerPage);
+    //     setData((prevData) => [...prevData, ...moreData]);
+    // }, [currentPage]);
 
-    useEffect(() => {
-        // Fetch more data when currentPage changes
-        console.log('currentPage', currentPage);
-        console.log('currentPage', currentPage);
-        const moreData = fetchData(currentPage, recordsPerPage);
-        setData((prevData) => [...prevData, ...moreData]);
-    }, [currentPage]);
+    // const handleScroll = () => {
+    //     console.log('handleScroll');
+    //     if (typeof window !== 'undefined') {
+    //         const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+    //         console.log('scrollableHeight', scrollableHeight);
+    //         const scrollPosition = window.scrollY;
+    //         console.log('scrollPosition', scrollPosition);
 
-    const handleScroll = () => {
-        console.log('handleScroll');
-        if (typeof window !== 'undefined') {
-            const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-            console.log('scrollableHeight', scrollableHeight);
-            const scrollPosition = window.scrollY;
-            console.log('scrollPosition', scrollPosition);
+    //         // Check if user has scrolled to the bottom
+    //         if (scrollPosition >= scrollableHeight - 10) {
+    //             // Increment the currentPage to fetch more data
+    //             setCurrentPage((prevPage) => prevPage + 1);
+    //         }
+    //     }
+    // };
 
-            // Check if user has scrolled to the bottom
-            if (scrollPosition >= scrollableHeight - 10) {
-                // Increment the currentPage to fetch more data
-                setCurrentPage((prevPage) => prevPage + 1);
-            }
-        }
-    };
+    // useEffect(() => {
+    //     if (typeof window !== 'undefined') {
+    //         // Add event listener to detect scrolling
+    //         window.addEventListener('scroll', handleScroll);
 
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            // Add event listener to detect scrolling
-            window.addEventListener('scroll', handleScroll);
+    //         return () => {
+    //             // Clean up the event listener
+    //             window.removeEventListener('scroll', handleScroll);
+    //         };
+    //     }
+    // }, []);
 
-            return () => {
-                // Clean up the event listener
-                window.removeEventListener('scroll', handleScroll);
-            };
-        }
-    }, []);
-
-    // Simulated function to fetch data from the local array
-    const fetchData = (page, limit) => {
-        // Calculate the start index based on the page and limit
-        const startIndex = (page - 1) * limit;
-        // Slice the data array to get the desired subset
-        console.log('navResults', navResults)
-        return navResults.slice(startIndex, startIndex + limit);
-    };
+    // // Simulated function to fetch data from the local array
+    // const fetchData = (page, limit) => {
+    //     // Calculate the start index based on the page and limit
+    //     const startIndex = (page - 1) * limit;
+    //     // Slice the data array to get the desired subset
+    //     console.log('navResults', navResults);
+    //     return navResults.slice(startIndex, startIndex + limit);
+    // };
 
 
 
@@ -208,7 +263,7 @@ const HomePage = () => {
                     }} />
                     <DialogContent>
                         {/* Dialog content goes here */}
-                        <div className="card_item" style={{ boxShadow: 'none', padding: '10px 0 20px 0' }}>
+                        <div style={{ boxShadow: 'none', padding: '10px 0 20px 0' }}>
                             <h3>{cardData?.name}
                                 {cardData?.card_type === 'subscription' ? <CachedIcon style={{ color: '#E71A67', background: '#FAEEF2', borderRadius: '50%', padding: '5px' }} /> : <LocalFireDepartmentOutlinedIcon style={{ color: '#E19436', background: '#FEF4EB', borderRadius: '50%', padding: '5px' }} />}
                             </h3>
@@ -270,14 +325,68 @@ const HomePage = () => {
                                 </IconButton>
                             </div>
                         </div>
-                        <div className="filter">
-                            <StyledIconButton>
+                        <div className="filter" style={{ position: 'relative' }}>
+                            <StyledIconButton onClick={showFilterOption}>
                                 <FilterListIcon /><p style={{ margin: '0', fontSize: '20px', fontWeight: 600, padding: '0 5px', color: '#787878' }}>Filter</p>
                             </StyledIconButton>
+                            {showFilter && <div className="filter_dropdown">
+                                <div className="filter_header"><p>Filter</p>
+                                    <hr
+                                        style={{
+                                            color: '#EFEFEF',
+                                            background: '#EFEFEF',
+                                            height: '2px',
+                                            width: '100%',
+                                            margin: '0 auto',
+                                            border: 'none'
+                                        }}
+                                    /></div>
+                                <div className="filter_content">
+                                    <div className="filter_content_type">
+                                        <p>Type</p>
+                                        <Grid container style={{ margin: '0 auto' }}>
+                                            <Grid item sm={6} md={6}>
+                                                <input onChange={(e) => setSubscription(e.target.checked)} type="checkbox" id="subscription" name="subscription" checked={subscription} /><label for="subscription">Subscription</label>
+                                            </Grid>
+                                            <Grid item sm={6} md={6}>
+                                                <input onChange={(e) => setBurner(e.target.checked)} type="checkbox" id="burner" name="burner" checked={burner} /><label for="burner">Burner</label>
+                                            </Grid>
+                                        </Grid>
+                                    </div>
+                                    <div className="filter_content_holder">
+                                        <p>Cardholder</p>
+                                        <div>
+                                            <FormControl style={{ margin: '0' }} sx={{ m: 1, minWidth: '100%' }} disabled>
+                                                <InputLabel id="Select-Cardholder">Select Cardholder</InputLabel>
+
+                                                <Select
+                                                    labelId="Select Cardholder"
+                                                    id="demo-simple-select"
+                                                    // value={age}
+                                                    label="Age"
+                                                //   onChange={handleChange}
+                                                >
+                                                    <MenuItem value={10}>All</MenuItem>
+                                                    <MenuItem value={20}>Your</MenuItem>
+                                                    <MenuItem value={30}>Block</MenuItem>
+                                                </Select>
+                                            </FormControl>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div className="filter_content_button">
+                                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                            <Button onClick={handleFilterOption} style={{ background: "#E71A67", borderRadius: '4px', margin: '0 5px', width: '100%' }}>Apply</Button><br />
+                                            <Button onClick={() => setShowFilter(false)} style={{ background: "#F8F8F8", borderRadius: '4px', margin: '0 5px', width: '100%', color: '#707070' }}>cancel</Button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>}
+
                         </div>
                     </div>
                     <div className="content">
-                        <GridCards handleClick={handleOpenDialog} onClick={getCardData} mockData={data} />
+                        <GridCards handleClick={handleOpenDialog} onClick={getCardData} mockData={searchTerm === '' ? filterData : searchResults} />
                     </div>
                 </Grid>
             </Grid>

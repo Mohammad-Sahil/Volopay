@@ -181,3 +181,48 @@ body {
   top: -10px;
   left: -20px;
 }
+
+/* *************styling of the filter dropdown************* */
+
+.filter_dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  z-index: 99;
+  width: 350px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter_dropdown .filter_header p {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 10px 20px;
+  color: #262626;
+}
+
+.filter_dropdown .filter_content {
+  padding: 10px 20px;
+}
+
+.filter_dropdown .filter_content .filter_content_type {
+  padding-bottom: 25px;
+  border-bottom: 2px solid #EFEFEF;
+}
+
+.filter_dropdown .filter_content_holder {
+  padding: 10px 0;
+}
+
+.filter_dropdown .filter_content .filter_content_type p,
+.filter_dropdown .filter_content_holder p {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #717171;
+}
+
+.filter_dropdown .filter_content_button {
+  padding-bottom: 10px;
+}
